@@ -37,7 +37,7 @@ const ReaderRegister = () => {
     }
 
     // Proceed with registration
-    const res = await fetch("http://localhost:5050/api/auth/register/reader", {
+    const res = await fetch("https://virlib-1.onrender.com/api/auth/register/reader", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
