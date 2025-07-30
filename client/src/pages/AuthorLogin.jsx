@@ -16,7 +16,7 @@ const AuthorLogin = ({ setUser }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5050/api/auth/login/author", {
+    const res = await fetch("https://virlib-1.onrender.com/api/auth/login/author", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -34,7 +34,7 @@ const AuthorLogin = ({ setUser }) => {
   };
 
   const handleSendOtp = async () => {
-    const res = await fetch("http://localhost:5050/api/auth/send-otp", {
+    const res = await fetch("https://virlib-1.onrender.com/api/auth/send-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
@@ -49,7 +49,7 @@ const AuthorLogin = ({ setUser }) => {
   };
 
   const handleVerifyOtp = async () => {
-    const res = await fetch("http://localhost:5050/api/auth/verify-otp", {
+    const res = await fetch("https://virlib-1.onrender.com/api/auth/verify-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, otp, newPassword }),
