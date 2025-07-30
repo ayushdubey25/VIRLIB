@@ -13,7 +13,7 @@ const RecommendedBooks = () => {
   useEffect(() => {
     const fetchRecommendedBooks = async () => {
       try {
-        const res = await fetch("http://localhost:5050/api/books/recommended");
+        const res = await fetch("https://virlib-1.onrender.com/api/books/recommended");
         const data = await res.json();
         setBooks(data || []);
       } catch (error) {
@@ -28,7 +28,7 @@ const RecommendedBooks = () => {
 
   const handleRating = async (bookId, rating, authorId) => {
     try {
-      const res = await fetch("http://localhost:5050/api/ratings", {
+      const res = await fetch("https://virlib-1.onrender.com/api/ratings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const RecommendedBooks = () => {
     const comment = comments[bookId]?.trim();
     if (!comment) return;
     try {
-      const res = await fetch("http://localhost:5050/api/comments", {
+      const res = await fetch("https://virlib-1.onrender.com/api/comments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
