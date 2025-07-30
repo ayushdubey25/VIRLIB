@@ -29,7 +29,7 @@ const Profile = () => {
 
       try {
         const res = await fetch(
-          `http://localhost:5050/api/auth/author/${user.id}`
+          `https://virlib-1.onrender.com/api/auth/author/${user.id}`
         );
         const data = await res.json();
         setAuthorData(data);
@@ -60,7 +60,7 @@ const Profile = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5050/api/auth/update-profile-image/${user.id}`,
+        `https://virlib-1.onrender.com/api/auth/update-profile-image/${user.id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -88,7 +88,7 @@ const Profile = () => {
     setMenuOpen(false);
 
     await fetch(
-      `http://localhost:5050/api/auth/update-profile-image/${user.id}`,
+      `https://virlib-1.onrender.com/api/auth/update-profile-image/${user.id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
