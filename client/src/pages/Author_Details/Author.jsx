@@ -20,7 +20,7 @@ const Author = () => {
       if (!user.id) return;
       try {
         const res = await fetch(
-          `http://localhost:5050/api/books/author/${user.id}`
+          `https://virlib-1.onrender.com/api/books/author/${user.id}`
         );
         const data = await res.json();
         setBooks(data);
@@ -39,7 +39,7 @@ const Author = () => {
     if (!confirm) return;
 
     try {
-      const res = await fetch(`http://localhost:5050/api/books/${bookId}`, {
+      const res = await fetch(`https://virlib-1.onrender.com/api/books/${bookId}`, {
         method: "DELETE",
       });
 
