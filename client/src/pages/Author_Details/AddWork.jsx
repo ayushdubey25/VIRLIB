@@ -103,7 +103,7 @@ const AddWork = () => {
       authorId: user.id,
     };
 
-    const res = await fetch("http://localhost:5050/api/books/add", {
+    const res = await fetch("https://virlib-1.onrender.com/api/books/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
