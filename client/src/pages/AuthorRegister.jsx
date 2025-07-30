@@ -37,7 +37,7 @@ const AuthorRegister = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:5050/api/auth/register/author",
+        "https://virlib-1.onrender.com/auth/register/author",
         {
           method: "POST",
           headers: {
