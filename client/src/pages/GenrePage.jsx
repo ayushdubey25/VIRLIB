@@ -65,7 +65,7 @@ const GenrePage = () => {
       setLoadingBooks(true);
       try {
         const res = await fetch(
-          `http://localhost:5050/api/openlibrary/genre/${genreId}?limit=50`
+          `https://virlib-1.onrender.com/api/openlibrary/genre/${genreId}?limit=50`
         );
         const data = await res.json();
 
@@ -86,7 +86,7 @@ const GenrePage = () => {
       setLoadingSeries(true);
       try {
         const res = await fetch(
-          `http://localhost:5050/api/openlibrary/genre/series/${genreId}?limit=20`
+          `https://virlib-1.onrender.com/api/openlibrary/genre/series/${genreId}?limit=20`
         );
         const data = await res.json();
 
