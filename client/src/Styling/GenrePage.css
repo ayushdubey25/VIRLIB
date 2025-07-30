@@ -1,0 +1,736 @@
+/* Ancient Library Theme with Ultra-Realistic Textures */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=UnifrakturMaguntia&display=swap");
+
+:root {
+  /* Material color variables */
+  --gilt-leather-light: #d4b483;
+  --gilt-leather-dark: #b58e58;
+  --parchment-light: #f3e9d0;
+  --parchment-dark: #e0d0b1;
+  --vellum-light: #f5f0e5;
+  --vellum-dark: #e5dcc8;
+  --morocco-leather-light: #a0522d;
+  --morocco-leather-dark: #8b4513;
+  --calfskin-light: #d2b48c;
+  --calfskin-dark: #c19a6b;
+  --cloth-light: #e6e0d6;
+  --cloth-dark: #d1c7b7;
+  --buckram-light: #cdb891;
+  --buckram-dark: #b8a47c;
+  --papyrus-light: #f5e7b8;
+  --papyrus-dark: #e5d7a7;
+  --velvet-light: #6b2d5c;
+  --velvet-dark: #4b1d3f;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.back-button {
+  background-color: #8d6e63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  float: right;
+}
+
+.back-button:hover {
+  background-color: #a1887f;
+}
+
+.genre-library-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #3a3226;
+  font-family: "Cormorant Garamond", serif;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Header Styles */
+.genre-library-header {
+  color: #f5f1e8;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+  border-bottom: 8px solid #3e2723;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+}
+
+.genre-library-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(46, 34, 22, 0.7);
+}
+
+.genre-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  flex: 1;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.genre-wood-carving {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-image: url("../Textures/wood-carving.png");
+  background-size: contain;
+
+  background-repeat: repeat-x;
+  z-index: 3;
+}
+
+.genre-library-title {
+  font-size: 3.5rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: "UnifrakturMaguntia", cursive;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.genre-shelf-title {
+  color: white;
+}
+
+.genre-header-content img {
+  margin-left: 0;
+}
+
+.genre-library-logo {
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+/* Main Library Content */
+.genre-library-main {
+  flex: 1;
+  padding: 3rem 2rem;
+  width: 100vw;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.genre-almirah {
+  border: 25px solid #2f100a;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 1), inset 0 0 50px rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.genre-almirah::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(61, 43, 31, 0.85);
+}
+
+.genre-shelf-section {
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.genre-section-label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  z-index: 2;
+  color: #e6d5b8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: "UnifrakturMaguntia", cursive;
+  letter-spacing: 1px;
+}
+
+.genre-label-text {
+  background: rgba(46, 34, 22, 0.7);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.genre-label-ornament {
+  position: absolute;
+  bottom: -10px;
+  left: 50px;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.genre-shelf {
+  background-color: #d7ccc8;
+  /* background-image: url("../Textures/old-wood-planks.jpeg"); */
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  min-height: 180px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #35180d;
+  z-index: 2;
+  width: auto;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.genre-shelf::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(0, 0, 0, 0.05)
+  );
+  pointer-events: none;
+}
+
+.genre-shelf-board {
+  position: absolute;
+  bottom: -18px;
+  left: -5px;
+  right: -5px;
+  height: 20px;
+  background-image: url("../Textures/wood-carving-bottom.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.genre-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.genre-genre-book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../Textures/aged-leather.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  z-index: -1;
+  transform: scale(1.1); /* prevent edge clipping */
+  opacity: 0.8;
+}
+
+/* Ultra-Realistic Book Styles */
+.genre-genre-book {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3); /* fallback dark tint */
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  height: 300px;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.genre-genre-book:hover {
+  transform: translateY(-5px);
+}
+
+.genre-book-spine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0), inset -11px 8px 28px rgba(0, 0, 0, 2);
+  border-right: 2px solid rgba(0.3, 0.3, 0.3, 0.3);
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-bottom: 0.3cm;
+  border-radius: 12px;
+}
+
+.genre-spine-title {
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  font-size: large;
+  text-align: center;
+}
+
+.genre-era-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  font-size: 0.7rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.genre-book-cover {
+  width: 180px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from space-between */
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+}
+.cover-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+/* Optional: make the scrollbar elegant */
+.cover-content::-webkit-scrollbar {
+  width: 6px;
+}
+.cover-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.genre-cover-ornament {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.genre-genre-book:hover .book-cover {
+  width: 60px;
+}
+
+.genre-genre-book:hover .cover-ornament {
+  opacity: 1;
+}
+
+/* Footer Styles */
+.genre-library-footer {
+  padding: 2rem;
+  margin-top: auto;
+  border-top: 8px solid #3e2723;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.genre-library-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(46, 34, 22, 0.8);
+}
+
+.genre-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  color: #e6d5b8;
+}
+
+.genre-established {
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.genre-footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.genre-footer-links a {
+  color: #e6d5b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  background-color: transparent;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.genre-footer-links a:hover {
+  color: #d4af37;
+}
+
+.genre-footer-links i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.genre-hours {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.genre-hours i {
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .genre-book {
+    height: 180px;
+  }
+  .book-spine,
+  .book-cover {
+    height: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .genre-book {
+    height: 160px;
+  }
+  .book-spine,
+  .book-cover {
+    height: 160px;
+    width: 45px;
+  }
+  .spine-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .library-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .shelf-content {
+    justify-content: center;
+  }
+  .section-label {
+    text-align: center;
+    padding-left: 0;
+  }
+  .genre-book {
+    height: 140px;
+  }
+  .book-spine,
+  .book-cover {
+    height: 140px;
+    width: 40px;
+  }
+  .spine-text {
+    font-size: 0.9rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .genre-book {
+    height: 120px;
+  }
+  .book-spine,
+  .book-cover {
+    height: 120px;
+    width: 35px;
+  }
+  .spine-text {
+    font-size: 0.8rem;
+  }
+  .almirah {
+    padding: 1rem;
+  }
+  .shelf {
+    padding: 1.5rem;
+  }
+  .genre-header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Adjust as needed for spacing */
+    text-align: center;
+  }
+
+  .header-left img {
+    width: 120px;
+    height: auto;
+  }
+
+  .header-right {
+    margin-top: 0.5rem; /* Adds gap above Return button */
+  }
+  .description {
+    margin-left: 2px;
+  }
+  .genre-section-label .genre-label-text {
+    padding-left: 1.4px;
+  }
+  /* .send-request-button {
+    margin-right: 2px;
+  } */
+
+  .genre-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Adjust gap as needed */
+    text-align: center;
+  }
+  /* 
+  .send-request-button {
+    width: 90%;
+    max-width: 250px;
+    padding: 10px 0;
+  } */
+}
+.library-footer button {
+  background: transparent;
+  color: white;
+}
+
+.genre-toggle-buttons {
+  margin-left: 1rem;
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.toggle-btn {
+  background: #4e342e;
+  color: #fff;
+  border: none;
+  font-size: small;
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-btn:hover,
+.toggle-btn.active {
+  background: #8d6e63;
+}
+
+.genre-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.genre-tabs button {
+  background-color: #3e2f1c;
+  color: #fdfaf3;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.genre-tabs button.active {
+  background-color: #d4af37;
+  color: #000;
+}
+
+.genre-search-bar {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 250px;
+  max-width: 100%;
+}
+.book-not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* spacing between text and button */
+  flex-wrap: wrap; /* to wrap in smaller screens */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.book-request-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.not-found-text {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0.5cm;
+  white-space: nowrap;
+}
+
+.send-request-button {
+  padding: 0.45rem 0.9rem;
+  margin-top: -2px; /* slightly raise the button */
+  background-color: #8d6e63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.send-request-button:hover {
+  background-color: #a1887f;
+}
+
+.genre-footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.book-not-found {
+  display: flex;
+  align-items: baseline; /* aligns text and button more cleanly */
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.book-not-found p {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.genre-book-cover h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.genre-book-cover p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.view-button {
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  /* margin-top: auto; */
+  margin-bottom: 0.2cm;
+}
+
+.view-button:hover {
+  background-color: #ffd700;
+}

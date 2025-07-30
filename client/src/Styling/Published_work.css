@@ -1,0 +1,150 @@
+/* PublishedWork.css */
+
+h2 {
+  font-size: 28px;
+}
+
+.book-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* gap: 1.5rem; */
+  /* margin-top: 2rem; */
+}
+
+.book-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.03);
+}
+
+.book-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.book-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.book-info h3 {
+  /* margin: 0 0 0.5rem; */
+  color: #fff;
+}
+
+.book-info p {
+  margin: 0.2rem 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.description {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.no-books {
+  font-size: 18px;
+  color: #bbb;
+  margin-top: 2rem;
+  font-style: italic;
+}
+.published-container {
+  padding: 2rem;
+  color: #f0e9e0;
+  text-align: center;
+}
+
+.preview-title {
+  margin-top: 2rem;
+  font-size: 20px;
+  color: #e0d4b9;
+  text-decoration: underline;
+}
+
+.no-books-msg {
+  color: #ccc;
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 2rem;
+}
+
+.book-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.book-details {
+  text-align: left;
+  /* margin-top: 10px; */
+  color: #fff;
+}
+
+.book-details h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #ffe28a;
+  text-align: center;
+}
+
+.book-details p {
+  margin: 2px 0; /* Reduced margin between each detail */
+  font-size: 15px; /* Optional: Slightly reduce text size */
+  line-height: 1.2; /* Tighter line spacing */
+}
+
+.book-desc {
+  font-size: 14px;
+  color: #eaeaea;
+}
+.download-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.delete-button {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #b71c1c;
+}
+
+.download-link:hover {
+  background-color: #388e3c;
+}

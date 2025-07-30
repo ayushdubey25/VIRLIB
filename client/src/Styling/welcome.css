@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: url("https://images.unsplash.com/photo-1575220360526-be964710f279?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.container {
+  max-width: 90%;
+  padding: 20px;
+  color: white;
+}
+
+.welcome h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 7cm;
+  animation: fadeInUp 1s ease forwards 1s;
+}
+
+.welcome h3 {
+  font-size: 1.5rem;
+  color: rgb(245, 204, 176);
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards 1.2s;
+}
+
+.btn {
+  background: white;
+  color: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  animation: fadeInScale 1s ease forwards 1.4s;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #f5cdb0;
+  color: black;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .btn {
+    width: 70%;
+    font-size: 1rem;
+  }
+}

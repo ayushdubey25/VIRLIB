@@ -1,0 +1,107 @@
+/* AddWork.css */
+.add-book-container {
+  max-width: 600px;
+  /* margin: 2rem auto; */
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  color: #f0e9e0;
+  font-family: "Georgia", serif;
+  margin-left: 0.5cm;
+}
+
+.add-book-container h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 28px;
+  color: #ffe28a;
+  margin-bottom: 1rem;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-book-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: #f7f4ef;
+  text-align: left;
+}
+
+.add-book-form input[type="text"],
+.add-book-form input[type="number"],
+.add-book-form textarea,
+.add-book-form input[type="file"] {
+  margin-top: 2px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+input[type="file"] {
+  background: none;
+  color: black;
+  /* padding: 4px; */
+  width: 140%;
+}
+
+.add-book-form button {
+  align-self: center;
+  background-color: #ffe28a;
+  color: #1c1c1c;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  width: 30%;
+}
+
+.add-book-form button:hover {
+  background-color: #e6cb6c;
+}
+
+.add-book-form label {
+  display: flex;
+  /* align-items: center;
+  justify-content: space-between; */
+  font-size: 16px;
+  color: #f7f4ef;
+  gap: 1rem;
+}
+
+.add-book-form input[type="text"],
+.add-book-form input[type="number"],
+.add-book-form textarea {
+  flex: 1;
+  margin-top: 0;
+}
+
+select[multiple] {
+  height: 100px;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.scroll {
+  color: #1c1c1c;
+}

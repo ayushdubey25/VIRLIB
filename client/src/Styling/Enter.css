@@ -1,0 +1,143 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: url("https://images.unsplash.com/photo-1575220360526-be964710f279?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 0, 0, 0.5);
+  z-index: -1;
+  margin-left: 0;
+}
+
+.enter-wrapper {
+  display: flex;
+  margin-top: 6cm;
+  flex-direction: row;
+  width: 100%;
+  /* height: 30%; */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+}
+
+.enter-form-1 {
+  width: 250px;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* height: 30%; */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.enter-form-1:hover {
+  transform: scale(1.05);
+}
+
+.enter-form-1 {
+  padding-top: 20px;
+  width: 80%;
+}
+
+.enter-wrapper h1 {
+  font-size: 26px;
+}
+
+.enter-form-1 p {
+  color: rgb(238, 180, 180);
+  font-size: 18px;
+  /* height: 30%; */
+  margin-left: 0cm;
+  width: 90%;
+}
+
+.enter-box{
+  height: 1.5cm;
+}
+
+.enter-form-1 .btn {
+  width: 100%;
+  max-width: 180px;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.enter-form-1 .btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.03);
+}
+
+.enter-box {
+  width: 65%;
+  padding: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.369);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for different screen sizes */
+@media (max-width: 1024px) {
+  .enter-wrapper {
+    gap: 25px;
+    padding: 15px;
+  }
+
+  .enter-form-1 {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .enter-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2cm;
+  }
+
+  .enter-form-1 {
+    width: 80%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enter-wrapper {
+    gap: 20px;
+    padding: 10px;
+    margin-top: 1cm;
+  }
+
+  .enter-form-1 {
+    width: 90%;
+    padding: 20px 10px;
+  }
+
+  .enter-box {
+    width: 80%;
+  }
+}

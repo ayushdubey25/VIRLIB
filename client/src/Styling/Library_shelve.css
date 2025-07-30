@@ -1,0 +1,671 @@
+/* Ancient Library Theme with Ultra-Realistic Textures */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=UnifrakturMaguntia&display=swap");
+
+:root {
+  /* Material color variables */
+  --gilt-leather-light: #d4b483;
+  --gilt-leather-dark: #b58e58;
+  --parchment-light: #f3e9d0;
+  --parchment-dark: #e0d0b1;
+  --vellum-light: #f5f0e5;
+  --vellum-dark: #e5dcc8;
+  --morocco-leather-light: #a0522d;
+  --morocco-leather-dark: #8b4513;
+  --calfskin-light: #d2b48c;
+  --calfskin-dark: #c19a6b;
+  --cloth-light: #e6e0d6;
+  --cloth-dark: #d1c7b7;
+  --buckram-light: #cdb891;
+  --buckram-dark: #b8a47c;
+  --papyrus-light: #f5e7b8;
+  --papyrus-dark: #e5d7a7;
+  --velvet-light: #6b2d5c;
+  --velvet-dark: #4b1d3f;
+}
+
+.library-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #3a3226;
+  font-family: "Cormorant Garamond", serif;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+
+/* Header Styles */
+.library-header {
+  color: #f5f1e8;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+  border-bottom: 8px solid #3e2723;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+}
+
+.library-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(46, 34, 22, 0.7);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.wood-carving {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-image: url("../Textures/wood-carving.png");
+  background-size: contain;
+
+  background-repeat: repeat-x;
+  z-index: 3;
+}
+
+.library-title {
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: "UnifrakturMaguntia", cursive;
+  margin: 0.5rem 0;
+}
+
+.header-content img {
+  margin-left: 0;
+}
+
+.library-logo {
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+/* Main Library Content */
+.library-main {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.almirah {
+  border: 20px solid #3e2723;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), inset 0 0 50px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.almirah::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(61, 43, 31, 0.85);
+}
+
+.shelf-section {
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.section-label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  z-index: 2;
+  color: #e6d5b8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: "UnifrakturMaguntia", cursive;
+  letter-spacing: 1px;
+}
+
+.label-text {
+  background: rgba(46, 34, 22, 0.7);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.label-ornament {
+  position: absolute;
+  bottom: -10px;
+  left: 50px;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.shelf {
+  background-color: #d7ccc8;
+  background-image: url("../Textures/old-wood-planks.jpeg");
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  min-height: 180px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #8d6e63;
+  z-index: 2;
+  width: auto;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.shelf::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(0, 0, 0, 0.05)
+  );
+  pointer-events: none;
+}
+
+.shelf-board {
+  position: absolute;
+  bottom: -18px;
+  left: -5px;
+  right: -5px;
+  height: 20px;
+  background-image: url("../Textures/wood-carving-bottom.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.shelf-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap to accommodate expanded books */
+  position: relative;
+  z-index: 2;
+}
+
+/* Ultra-Realistic Book Styles */
+.genre-book {
+  display: flex;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  perspective: 1000px;
+  height: 200px;
+  position: relative;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+  margin-right: -40px; 
+  transition: all 0.5s ease;
+}
+
+/* Add depth to the book when opened */
+.genre-book:hover {
+  transform: translateY(-10px) translateZ(20px);
+  filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.5));
+}
+
+.book-spine {
+  width: 80px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  position: relative;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3),
+    inset -8px 0 15px rgba(0, 0, 0, 0.2);
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.book-spine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+/* Add page curl effect */
+.book-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transform: skewY(2deg);
+  transform-origin: right top;
+}
+
+/* Add subtle page thickness */
+.book-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0) 3%
+  );
+  pointer-events: none;
+}
+
+/* Add these new styles */
+.book-cover .cover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-10px);
+  transition: all 0.4s ease 0.2s;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  color: white;
+}
+
+.book-cover .cover-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-cover .cover-content p {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Adjust spine during hover */
+.genre-book:hover .book-spine {
+  transform: rotateY(-35deg) translateZ(-5px);
+  box-shadow: 15px 0 25px rgba(0, 0, 0, 0.4),
+    inset -15px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.spine-text {
+  transform: rotate(90deg);
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-align: center;
+  font-weight: bold;
+  color: #e6e0d6;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 2px rgb(0, 0, 0);
+  -webkit-text-stroke: 0.25px rgb(243, 240, 240);
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 2;
+  line-height: 1.2;
+  width: 200px; /* or more */
+}
+
+.era-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  font-size: 0.7rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.book-cover {
+  width: 0;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28); /* More dynamic easing */
+  opacity: 0;
+  /* Inner shadow for depth */
+  box-shadow: inset 8px 0 15px -5px rgba(0, 0, 0, 0.5),
+    inset 1px 0 2px rgba(255, 255, 255, 0.1);
+  /* Edge highlight */
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cover-ornament {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Ensure cover content is hidden by default */
+.cover-ornament,
+.book-cover .cover-content {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+/* Enhanced hover effect */
+.genre-book:hover .book-cover {
+  width: 60px;
+  opacity: 1;
+  /* Sharp opening effect */
+  transform: perspective(1200px) rotateY(-5deg);
+  /* Outer shadow for lifted page effect */
+  box-shadow: inset 8px 0 15px -5px rgba(0, 0, 0, 0.5),
+    inset 1px 0 2px rgba(255, 255, 255, 0.1), 5px 1px 5px rgba(0, 0, 0, 0.3),
+    15px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.genre-book:hover .cover-ornament {
+  opacity: 1;
+}
+
+.genre-book:hover .book-cover .cover-content {
+  transform: translateX(0);
+}
+
+/* Footer Styles */
+.library-footer {
+  padding: 2rem;
+  margin-top: auto;
+  border-top: 8px solid #3e2723;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.library-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(46, 34, 22, 0.8);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  color: #e6d5b8;
+}
+
+.established {
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: #e6d5b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+}
+
+.footer-links i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.hours {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.hours i {
+  margin-right: 0.5rem;
+}
+
+.logout-button {
+  border: none;
+  padding: 0.6rem 1rem; /* Ensure enough vertical and horizontal padding */
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  display: block; /* Make it block to cover full width on mobile if needed */
+  width: fit-content; /* Shrinks to content on large screens */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.logout-button:hover {
+  background-color: #922b21;
+}
+
+.recommended-button {
+  background: linear-gradient(135deg, #8d6748, #b08968);
+  color: #fff8e1;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.recommended-button:hover {
+  background: linear-gradient(135deg, #7a523a, #a07252);
+  transform: scale(1.05);
+}
+
+.recommended-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .genre-book {
+    height: 180px;
+  }
+  .book-spine,
+  .book-cover {
+    height: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .genre-book {
+    height: 160px;
+  }
+  .book-spine,
+  .book-cover {
+    height: 160px;
+    width: 45px;
+  }
+  .spine-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .library-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-right: 19px;
+  }
+  .library-header {
+    padding: 0.25rem;
+    width: 100%;
+  }
+  .library-logo {
+    margin-right: 8px;
+  }
+  .label-text {
+    font-size: medium;
+  }
+  .logout-button {
+    margin-right: 12px;
+    margin-top: 1rem;
+  }
+  .shelf-content {
+    justify-content: center;
+  }
+  .section-label {
+    text-align: center;
+    padding-left: 0;
+  }
+  .genre-book {
+    height: 140px;
+  }
+  .book-spine,
+  .book-cover {
+    height: 140px;
+    width: 40px;
+  }
+  .spine-text {
+    font-size: 0.9rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .recommended-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .logout-button {
+    margin-left: 0 !important;
+    margin-right: 0;
+    margin-top: 0.3rem;
+    width: 90%;
+    max-width: 250px;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+  .recommended-button {
+    width: 90%;
+    max-width: 250px;
+    margin-bottom: 0.32rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .header-content img {
+    width: 120px;
+    height: auto;
+    margin: 0;
+  }
+
+  .library-title {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .library-logo {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .header-content h1 {
+    margin-top: 0;
+  }
+}

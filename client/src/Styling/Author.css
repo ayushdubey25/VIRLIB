@@ -1,0 +1,226 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: url("https://images.unsplash.com/photo-1575220360526-be964710f279?q=80&w=2940&auto=format&fit=crop")
+    no-repeat center center;
+  width: 100vw;
+  background-size: cover;
+  height: 100%;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.8); /* dark overlay */
+  backdrop-filter: blur(8px);
+  color: white;
+  height: 120px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 190px;
+  height: 110px;
+  margin-right: 15px;
+  margin-bottom: 1cm;
+  margin-top: 1cm;
+}
+
+.logo-container h1 {
+  margin-top: 1cm;
+  font-size: 36px;
+  font-weight: 600;
+}
+.logout-button {
+  background-color: #b03a2e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: auto;
+}
+.logout-button:hover {
+  background-color: #922b21;
+}
+
+/* Main */
+.dashboard-main {
+  display: flex;
+  flex: 1;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: white;
+}
+
+.sidebar button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 30px;
+  color: white;
+}
+
+.content form input,
+.content form button {
+  margin: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+.content form input {
+  width: 200px;
+}
+
+.content form button {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.content form button:hover {
+  background-color: #ddd;
+}
+.logout-button {
+  background-color: #b03a2e;
+  color: white;
+  border: none;
+  padding: 8px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.logout-button:hover {
+  background-color: #922b21;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .logo-container h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .logo-container img {
+    margin: 0 0 15px 0;
+  }
+
+  .logout-button {
+    margin: 15px auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .sidebar button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-container h1 {
+    font-size: 22px;
+    padding-top: 45px;
+  }
+  .logo-container img {
+    height: 200px;
+    width: 320px;
+    margin-bottom: -90px;
+  }
+
+  .sidebar button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .dashboard-header {
+    height: 370px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-header .logout-button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+    margin-top: 1rem;
+    margin: 1rem 0 0 0;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}

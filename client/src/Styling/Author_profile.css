@@ -1,0 +1,195 @@
+h2 {
+  text-align: center;
+  font-size: 24;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-detail-row {
+  font-size: 20px;
+  padding: 10px;
+  line-height: 1.6;
+  width: 300px;
+  color: #f1f1f1;
+}
+
+.profile-container img {
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  object-fit: cover;
+  width: 100;
+  height: 100;
+}
+
+.profile-container {
+  /* text-align: center; */
+  padding: 2rem;
+  color: #f0e9e0;
+  background: rgba(20, 20, 20, 0.5);
+  border-radius: 20px;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.menu-wrapper {
+  position: absolute;
+  top: 20%;
+  left: 6cm;
+  transform: translateY(-50%);
+}
+
+.menu-dots {
+  background: none;
+  border: none;
+  font-size: 22px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+}
+
+.menu-dots:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.menu-dropdown {
+  background-color: #333;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  position: absolute;
+  width: 200%;
+  top: 25px;
+  left: 40px;
+  right: 0;
+  text-align: left;
+  z-index: 10;
+  padding: 5px;
+}
+
+.menu-dropdown p {
+  padding: 5px 10px;
+  margin: 0;
+  cursor: pointer;
+  color: #eee;
+  font-size: 10px;
+}
+
+.menu-dropdown p:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.save-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #004d40;
+}
+
+.author-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-details-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  padding: 10px 10px;
+  width: 450px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* .profile-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #eee;
+  font-size: 16px;
+} */
+
+.label {
+  font-weight: 600;
+  width: 50%;
+}
+
+.author-profile-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  gap: 10px;
+  padding-top: 30px;
+  /* width: 120px; */
+}
+
+.profile-detail-row {
+  width: 110%;
+  display: flex;
+  flex-direction: column; /* Makes label and value stack vertically */
+  margin-bottom: 0.6rem;
+}
+
+.profile-detail-row .label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #f5f5f5;
+  margin-bottom: 0rem;
+}
+
+.profile-detail-row .value {
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  word-break: break-all;
+  color: #eeeeee;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  line-height: 1.5;
+  width: 100%;
+  text-align: left;
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.08);
+}
