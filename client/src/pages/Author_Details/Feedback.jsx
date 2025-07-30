@@ -29,7 +29,7 @@ const Feedback = () => {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const res = await fetch("http://localhost:5050/api/feedback", {
+        const res = await fetch("https://virlib-1.onrender.com/api/feedback", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
