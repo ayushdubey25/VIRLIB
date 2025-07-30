@@ -12,7 +12,7 @@ const ForgotPasswordLogin = ({ setUser }) => {
 
   const sendOtp = async () => {
     setLoading(true); // Start loading
-    const res = await fetch("http://localhost:5050/api/auth/send-otp", {
+    const res = await fetch("https://virlib-1.onrender.com/api/auth/send-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
@@ -28,7 +28,7 @@ const ForgotPasswordLogin = ({ setUser }) => {
   };
 
   const verifyOtp = async () => {
-    const res = await fetch("http://localhost:5050/api/auth/verify-otp", {
+    const res = await fetch("https://virlib-1.onrender.com/api/auth/verify-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, otp }),
